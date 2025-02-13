@@ -18,6 +18,13 @@
     }
     polaris-chip {
       margin: 16px;
+      --polaris-chip-background-color: light grey;
+    }
+    a {
+      margin: 16px;
+      background-color: light grey;
+      color: gold;
+      padding: 8px;
     }
   </style>
   <title>polaris-chip / my-card</title>
@@ -31,8 +38,30 @@
   <polaris-chip title="Sports are the only thing that matter"></polaris-chip>
   <polaris-chip title="Grants and donations"></polaris-chip>
 
+  <a href="https://psu.edu/" target="_blank">PSU</a>
+
   <h1>my-card</h1>
   <my-card></my-card>
+
+  <my-card
+  title="Terry Mclaurin"
+  image="https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/f_png/redskins/humjd6iehumevmoxshu4.png"
+  link="https://www.washingtonfootball.com/team/players-roster/terry-mclaurin/"></my-card>
+
+  <my-card
+  title="Zach Ertz"
+  image="https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/f_auto/redskins/wtgfspg1fxql246tovhr.jpg"
+  link="https://www.philadelphiaeagles.com/team/players-roster/zach-ertz/"></my-card>
+
+  <my-card
+  title="Frankie Luvu"
+  image="https://images2.minutemediacdn.com/image/upload/c_crop,w_3116,h_1752,x_0,y_0/c_fill,w_1080,ar_16:9,f_auto,q_auto,g_auto/images%2FImagnImages%2Fmmsport%2Fcommander_country%2F01jjhhgwxpzbqdjb1gwq.jpg"
+  link="https://www.washingtonfootball.com/team/players-roster/frankie-luvu/"></my-card>
+
+  <my-card
+  title="Bobby Wagner"
+  image="https://images2.minutemediacdn.com/image/upload/c_crop,w_1080,h_607,x_0,y_0/c_fill,w_620,ar_16:9,f_auto,q_auto,g_auto/images%2FvoltaxMediaLibrary%2Fmmsport%2Fcommander_country%2F01j2st9qn7x2yvwnf6xc.jpg"
+  link="https://www.washingtonfootball.com/team/players-roster/bobby-wagner/"></my-card>
 
   <!-- this is what is bringing in the definition for this tag -->
   <script type="module" src="./src/polaris-chip.js"></script>
