@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+import "@haxtheweb/meme-maker/meme-maker.js";
 
 /**
  * Now it's your turn. Here's what we need to try and do:
@@ -16,17 +17,23 @@ export class MyCard extends LitElement {
     super();
     this.title = "Jayden Daniels";
     this.image = "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1000w,f_auto,q_auto:best/rockcms/2025-01/250121-Jayden-Daniels-ch-1548-3eb03c.jpg";
-    this.link = "https://www.commanders.com/";
+    this.link = "Details";
     this.fancy = false;
+    this.p = "Jayden Daniels, drafted 2nd overall by the Commanders, didn't have many expectations for our team prior to the season. However, after a few short games, fans quickly noticed how good this kid really was. He would go on to lead Washington to their first playoff win since 1991. Boy oh boy is this kid special";
   }
 
   static get styles() {
     return css`
       :host {
         display: block;
+        display: inline-flex;
       }
       :host([fancy]) .card {
-        background-color: blue;
+        display: block;
+        display: inline-block;
+        background-color: gold;
+        border: 4px solid red;
+        box-shadow: 10px 10px 5px gold;
       }
       .card {
         background-color: maroon;
@@ -65,6 +72,21 @@ export class MyCard extends LitElement {
           color: gold;
         }
       }
+      details summary {
+        text-align: left;
+        font-size: 20px;
+        padding: 8px 0;
+      }
+      details[open] summary {
+        font-weight: bold;
+      }
+      details div {
+        border: 2px solid red;
+        text-align: left;
+        padding: 8px 0;
+        height: 70px;
+        overflow: auto;
+      }
     `;
   }
 
@@ -89,12 +111,16 @@ export class MyCard extends LitElement {
       <details ?open="${this.fancy}" @toggle="${this.openChanged}">
       <summary>Description</summary>
       <div>
+        <slot>${this.description}</slot>
+      </div>
+    </details>
+    <div></div>
         <slot></slot>
         <a href="${this.link}" target="_blank">
           <button class="btn"><em>Link for more info</em></button>
         </a>
       </div>
-    </details>
+    </details> 
    </div>`;
   }
 

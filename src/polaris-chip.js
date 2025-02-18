@@ -57,8 +57,6 @@ export class PolarisChip extends LitElement {
         padding: 16px;
         margin: 8px;
       }
-      a:focus,
-      a:active,
       a:hover {
         background-color: grey;
         border: 1px solid black;
