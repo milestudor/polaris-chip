@@ -26,14 +26,14 @@ export class MyCard extends LitElement {
     return css`
       :host {
         display: block;
-        display: inline-flex;
+        display: inline-block;
       }
       :host([fancy]) .card {
         display: block;
         display: inline-block;
-        background-color: gold;
-        border: 4px solid red;
-        box-shadow: 10px 10px 5px gold;
+        background-color: maroon;
+        border: 2px solid red;
+        box-shadow: 8px 8px 5px gold;
       }
       .card {
         background-color: maroon;
@@ -112,6 +112,7 @@ export class MyCard extends LitElement {
       <summary>Description</summary>
       <div>
         <slot>${this.description}</slot>
+        <p>Jayden Daniels, former Heisman winner from LSU now on the Washington Commanders. This dude is special and will bring 3 chips back to Washington</p>
       </div>
     </details>
     <div></div>
